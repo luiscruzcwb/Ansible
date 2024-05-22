@@ -2,11 +2,11 @@
 
 Projetos e estudos sobre Ansible.
 
-![Ansible](https://sretips.com.br/images/iac/ansible.png)
+![Ansible](https://miro.medium.com/v2/resize:fit:1400/1*ZAJs0AuKVdnRSqOS8Mw3Kg.png)
 
 #### Anotações
 
-Ferramenta para gerenciar, automatizar, configurar servidores e implantar aplicativos a partir de uma localização central.
+Ansible, ferramenta para gerenciar, automatizar, configurar servidores e implantar aplicativos a partir de uma localização central.
 
 #### Arquitetura
 
@@ -16,6 +16,8 @@ Ferramenta para gerenciar, automatizar, configurar servidores e implantar aplica
 - **Host Inventory: Arquivo de texto (control node), com a lista de hosts / Ip`s que serão gerenciados pelo Ansible**
 - **Comunicação via SSH**
 - **Não há necessidade da instalação local de softwares para a distribuição no Managed Hot** 
+
+--------
 
 - **Code Modules**
 São scripts reutilizáveis que realizam tarefas específicas, como instalar pacotes, copiar arquivos ou gerenciar serviços. O Ansible vem com centenas de módulos predefinidos que facilitam a automação de diversas tarefas em diferentes sistemas e aplicações.
@@ -32,11 +34,10 @@ São componentes que ampliam as funcionalidades do Ansible. Existem vários tipo
 - **Host Inventory**
 É uma lista de máquinas gerenciadas pelo Ansible. Pode ser um arquivo estático (geralmente em formato INI ou YAML) ou dinâmico, gerado a partir de fontes externas (como CMDBs, cloud providers, etc.). O inventário define quais hosts são alvos das operações de automação.
 
-- **Ansible Galaxy**
+- **Ansible [Galaxy](https://galaxy.ansible.com/ui/)** 
 É uma plataforma comunitária onde os usuários podem encontrar, compartilhar e colaborar em papéis (roles) do Ansible. Um role é um conjunto reutilizável de tarefas, variáveis, templates e arquivos que podem ser usados para configurar partes de um sistema ou aplicação. O Ansible Galaxy facilita a reutilização de configurações complexas e promove a colaboração entre desenvolvedores e administradores.
 
-
-
+--------
 
 #### Comandos 
 
@@ -100,7 +101,6 @@ Exibe informações verbosas durante a execução.
 - -vvv: 
 
 Exibe informações de depuração. Essa opção é útil para depurar problemas ou verificar detalhes específicos durante a execução.
-
 
 - -vvvv: 
 
