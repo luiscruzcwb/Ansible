@@ -10,44 +10,59 @@ Ferramenta para gerenciar, automatizar, configurar servidores e implantar aplica
 
 
 
-#### Comandos / 
+
+
+
+
+
+#### Comandos 
 
 ansible --version
 
 **Listas todos os Hosts**
+
 ansible all -i hosts --list-hosts
 
 ansible all -i hosts -m ping
 
 ansible-playbook -i hosts playbook.yml -b 
 
-**O parâmetro -b ou --become permite executar o comando com privilégios elevados.**
+**Become**
+O parâmetro -b ou --become permite executar o comando com privilégios elevados.
 
 **Copiar arquivos**
+
 ansible all -i hosts -m copy -a "src=./copy.txt dest=/copy.txt" -b
 
 **Reiniciar**
+
 ansible all -i hosts -m reboot -b 
 
 ansible all -i hosts -m apt -a "name=nginx update_cache=yes" -b
 
 **Remove pacote**
+
 ansible all -i hosts -m apt -a "name=curl state=absent"
 
 **Instala pacotes**
+
 ansible all -i hosts -m apt -a "name=curl state=present"
 
 **Parar Services**
+
 ansible all -i hosts -m service -a "name=nginx state=stopped"
 
 **chave_ssh**
+
 ssh-keygen -t rsa -b 2048
 
 **Configurar chave ssh com senha**
+
 ssh-agent bash
 ssh-add "caminho da chave"
 
 **Verbose**
+
 Para ver quais tarefas estão sendo executadas durante a execução de um playbook ou comando Ansible, você pode usar a opção -v ou --verbose. 
 
 Isso fornecerá informações mais detalhadas durante a execução.
