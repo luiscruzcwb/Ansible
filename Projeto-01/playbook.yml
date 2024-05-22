@@ -1,0 +1,15 @@
+---
+- name: Instalação do nginx e Configuração
+  hosts: all
+  tasks:
+    - name: Instalar o nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+    - name: Copiar o index.html
+      ansible.builtin.copy:
+        src: ./index.html
+        dest: /var/www/html/index.nginx-debian.html
+
+
+      
