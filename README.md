@@ -1,21 +1,25 @@
-##Ansible
-Projetos e estudos sobre Ansible.
+#### Ansible
 
-Ferramenta para gerenciar, automatizar, configurar servidores e implantar aplicativos a partir de uma localização central.
+Projetos e estudos sobre Ansible.
 
 ![Ansible](https://sretips.com.br/images/iac/ansible.png)
 
 #### Anotações
 
-ansible --version
+Ferramenta para gerenciar, automatizar, configurar servidores e implantar aplicativos a partir de uma localização central.
 
-**chave_ssh**
-ssh-keygen -t rsa -b 2048
+
+
+#### Comandos / 
+
+ansible --version
 
 **Listas todos os Hosts**
 ansible all -i hosts --list-hosts
 
 ansible all -i hosts -m ping
+
+ansible-playbook -i hosts playbook.yml -b 
 
 **O parâmetro -b ou --become permite executar o comando com privilégios elevados.**
 
@@ -36,13 +40,12 @@ ansible all -i hosts -m apt -a "name=curl state=present"
 **Parar Services**
 ansible all -i hosts -m service -a "name=nginx state=stopped"
 
+**chave_ssh**
+ssh-keygen -t rsa -b 2048
+
 **Configurar chave ssh com senha**
 ssh-agent bash
 ssh-add "caminho da chave"
-
----------------
-
-ansible-playbook -i hosts playbook.yml -b 
 
 **Verbose**
 Para ver quais tarefas estão sendo executadas durante a execução de um playbook ou comando Ansible, você pode usar a opção -v ou --verbose. 
